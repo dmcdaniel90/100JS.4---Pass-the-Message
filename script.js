@@ -1,18 +1,21 @@
 'use strict'
 
-const inputField = document.querySelector('.input-field');
+const inputField = document.getElementById('input-field');
 const submitButton = document.querySelector('.submit-button');
-const message = document.querySelector('.message');
-let myMessage = ''
+const message = document.querySelector('.message'); 
 
-submitButton.addEventListener('click', ()=> {
-  myMessage = inputField.textContent.value;
-  message.innerHTML = myMessage;
+const updateMsg = function() {
+  message.textContent = inputField.value;
+  inputField.value = '';
+};
+
+
+submitButton.addEventListener('click', ()=> { 
+  setTimeout(updateMsg, 1000);
 })
 
 document.addEventListener('keyup', (e)=> {
   if (e.code === "Enter") {
-    e.preventDefault();
-    submitButton.click();
+    submitButton.click()
   }
 })
