@@ -1,0 +1,67 @@
+:root {
+  --primary-color: #4da1e0;
+  --secondary-color: #f0f0f0;
+  --button-active: #7ae7ff;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.container {
+  width: 50%;
+  max-width: 600px;
+  height: 40%;
+  max-height: 500px;
+  background-color: var(--secondary-color);
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+
+
+.input-field {
+  width: 90%;
+  height: 40px;
+  border-radius: 0;
+  font-size: 1em;
+  padding: 1px 5px;
+}
+
+.submit-button {
+  width: auto;
+  padding: 5px 10px;
+  height: 50px;
+  background-color: var(--primary-color);
+  font-size: 1em;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid var(--button-active)
+}
+
+.submit-button:active {
+  background-color: var(--button-active);
+  border-color: var(--primary-color);
+}
+
+
+
+.message {
+  color: var(--primary-color);
+  justify-self: start;
+}
+
+
